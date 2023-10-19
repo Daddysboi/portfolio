@@ -1,0 +1,20 @@
+:root {
+  --container-width: 100%;
+  --full-height: 100vh;
+  --flex: flex;
+  --red-border: 1px solid red;
+  --blue-border: 1px solid blue;
+  --green-border: 1px solid green;
+  --gray-border: 1px solid #e3e3e3;
+  --gray-alt-border: 1px solid #ced4da;
+  --bg-green: #08784f;
+  --bg-dark-green: #08784f;
+  --border-radius: 10px;
+  --box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --container-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+
+  /* Breakpoints */
+  --tablet-width: 750px;
+  --md-computer-width: 970px;
+  --lg-computer-width: 1170px;
+}

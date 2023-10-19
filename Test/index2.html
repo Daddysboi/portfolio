@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Game</title>
+</head>
+<body>
+  <div>
+    <p>Rock Paper Scissors</p>
+    <div>
+      <button class="rock" onclick="
+
+        playGame('rock')
+        
+        ">Rock</button>
+      <button class="paper" onclick="
+          playGame('paper')
+      ">Paper</button>
+      <button class="scissors" onclick="
+          playGame('scissors')
+      ">Scissors</button>
+      <button class="resetScore" onclick="
+        score.wins = 0;
+        score.looses = 0;
+        score.ties = 0;
+ 
+      ">Reset Score</button>
+    </div>
+  </div>
+  <script>
+        let score = {
+            wins : 0,
+            looses: 0,
+            ties : 0
+          }
+
+        function pickComputerMove() {
+          let randomNumber = Math.random();
+          let computerMove = ''
+          if(randomNumber <= 1/3){computerMove = 'rock';}
+          else if(randomNumber > 1/3 && randomNumber <= 2/3 ){computerMove = 'paper';}
+          else if(randomNumber > 2/3){computerMove = 'scissors';}
+          return computerMove;
+        }
+        
+        
+        function playGame(playerMove) {
+          let result = '';
+          const computerMove = pickComputerMove();
+          
+
+
+          if (playerMove === 'rock') {
+            if (computerMove === 'rock'){result = 'Tie.';}
+            else if (computerMove === 'paper'){result = 'You Loose.';}
+            else if (computerMove === 'scissors'){result = 'You Won.';}
+          }
+          
+          if (playerMove === 'paper') {
+            if (computerMove === 'rock'){result = 'You Won.';}
+            else if (computerMove === 'paper'){result = 'Tie.';}
+            else if (computerMove === 'scissors'){result = 'You Loose.';}
+          }
+          
+          if (playerMove === 'scissors') {
+            if (computerMove === 'rock'){result = 'You Loose.'; }
+            else if (computerMove === 'paper'){result = 'You Won.';}
+            else if (computerMove === 'scissors'){result = 'Tie.'; }
+          }
+          
+          switch (result) {
+            case 'You Won.':score.wins++
+              break;
+            case 'You Loose.':score.looses++
+              break;
+            case 'Tie.':score.ties++
+              break;
+          }
+          
+     
+          alert(`You pick ${playerMove}. Computer picked ${computerMove}. ${result}
+Wins: ${score.wins}, Losses: ${score.looses}, Ties: ${score.ties}
+          `)
+        }    
+        
+  </script>
+</body>
+</html>
+
+
+

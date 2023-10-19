@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazone Shipping Calculator</title>
+  <style>
+    input {
+      width: 10rem;
+      margin-right: 5px;
+    }
+
+    div {
+      margin: 0;
+      align-items: center;
+      display: flex;
+
+    }
+  </style>
+</head>
+
+<body>
+  <p class="header">Amazone Shipping Calculator
+
+  <p class="paid-shipping">Orders under $40 = +$10 shipping.</p>
+  <p class="free-shipping">Orders over $40 = free shipping.</p>
+
+  <div>
+    <input class="js-shipping-cost" type="text" value="" placeholder="cost of goods">
+    <button onclick="
+      calculateTotal()
+    ">calculate</button>
+  </div>
+  <p class="js-total-cost"></p>
+
+  <script>
+
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-shipping-cost')
+      cost = +(inputElement.value)
+      if (cost < 40) {
+        cost = cost + 10
+      } else {
+        cost
+
+      }
+      console.log(cost);
+      console.log(document.querySelector('.js-total-cost').innerHTML = `$${cost}`)
+    }
+
+
+  </script>
+</body>
+
+</html>

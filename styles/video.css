@@ -1,0 +1,50 @@
+.emage{ 
+width: 300px; 
+display: block;
+}
+
+.channel-title{
+  width: 250px;
+  display: inline-block;  
+}
+
+
+.channel-picture{
+  vertical-align: top;
+  display: inline-block;  
+  width: 50px;
+}
+
+.profile-pic{
+  width: 100%;
+  border-radius: 60px;
+}
+
+.tytle{
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.video-layout1{
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+
+.video-layout2{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.emage-row{
+  margin-bottom: 12px;
+}
+
+.description1{
+  margin-bottom: 10px;
+}
